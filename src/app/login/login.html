@@ -1,0 +1,50 @@
+<div class="container">
+    <!--  <div class="col-md-6">
+          <form (ngSubmit)="login()" class="form-horizontal">
+              <div class="form-group">
+                  Enter email<input type="email" class="form-control">
+              </div>
+              <div class="form-group">
+                  Enter password<input type="password" class="form-control">
+              </div>
+              <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Login</button>
+                  Don't have a account <a  class="btn btn-link">register here</a>
+              </div>
+          </form>
+      </div>-->
+
+    <form class="text-left col-md-6" #loginFormRef="ngForm" (ngSubmit)="login()">
+        <div class="login-form-main-message"></div>
+        <div class="main-login-form">
+            <div class="login-group">
+                <div class="form-group">
+                    <label for="lg_username" class="sr-only">Username</label>
+                    <input type="email"
+                           [(ngModel)]="email"
+                           class="form-control"
+                           id="lg_username"
+                           name="email"
+                           required
+                           placeholder="email">
+                </div>
+                <div class="form-group">
+                    <label for="lg_password" class="sr-only">Password</label>
+                    <input type="password"
+                           [(ngModel)]="password"
+                           class="form-control"
+                           id="lg_password"
+                           name="password"
+                           required
+                           placeholder="password">
+                </div>
+                <div class="form-group login-group-checkbox">
+                    <!--<input type="checkbox" id="lg_remember" name="lg_remember">
+                    <label for="lg_remember">remember</label>-->
+                    <p>new user? <a routerLink="new">create new account</a></p>
+                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
